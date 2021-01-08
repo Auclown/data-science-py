@@ -36,3 +36,9 @@ print("9:", rand_num)
 # 10. Use NumPy to generate an array of 25 random numbers sampled from a standard normal distribution
 rand_samp = np.random.randn(25)
 print("10:", rand_samp)
+
+# 11. Create an array of 20 linearly spaced points between 0 and 1
+lin_space = np.linspace(0, 1, 20)
+print(lin_space)
+
+# 12. 
