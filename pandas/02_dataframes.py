@@ -26,3 +26,23 @@ print("")
 df['new'] = df['W'] + df['Y']
 print(df['new'])
 print("")
+
+# Can drop a column
+df.drop('new', axis=1, inplace=True)
+print(df)
+print("")
+
+# and also a row
+df.drop('E')
+print(df)
+print("")
+
+# Selecting rows by
+print(df.loc['A'])
+# or
+print(df.iloc[2])
+print("")
+
+# Return a subset of the dataframe by
+print(df.loc[['A', 'B'], ['W', 'Y']])
+print("")
