@@ -19,3 +19,10 @@ print("")
 # To print the values of rows that satisfy the condition:
 print(df[df['W'] > 0])
 print("")
+
+# Multiple conditions:
+print(df[(df['W'] > 0) | (df['Y'] > 1)])
+print("")
+
+# Reset index back to the default:
+df.reset_index()
