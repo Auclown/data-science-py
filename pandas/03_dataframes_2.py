@@ -26,3 +26,13 @@ print("")
 
 # Reset index back to the default:
 df.reset_index()
+
+# Create a column called States, and giving it some values
+newind = 'CA NY WY OR CO'.split()
+df["States"] = newind
+print(df)
+print("")
+
+# Can convert column to the index
+print(df.set_index("States"))
+print("")
