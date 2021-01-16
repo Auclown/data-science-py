@@ -12,3 +12,10 @@ hier_index = pd.MultiIndex.from_tuples(hier_index)
 df = pd.DataFrame(randn(6, 2), hier_index, ['A', 'B'])
 
 print(df)
+print("")
+
+# Call data
+print(df.loc['G1'])
+print("")
+print(df.loc['G1'].loc[1])
+print("")
