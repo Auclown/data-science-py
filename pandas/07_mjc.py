@@ -22,3 +22,19 @@ df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
 
 # Concatenation glues data together
 print(pd.concat([df1, df2, df3]))
+print("")
+
+# without axis=1 parameter, it will only join the rows
+print(pd.concat([df1, df2, df3], axis=1))
+print("")
+
+# Another DataFrames
+left = pd.DataFrame(
+    {'key': ['K0', 'K1', 'K2', 'K3'], 'A': ['A0', 'A1', 'A2', 'A3'], 'B': ['B0', 'B1', 'B2', 'B3']})
+
+right = pd.DataFrame(
+    {'key': ['K0', 'K1', 'K2', 'K3'], 'C': ['C0', 'C1', 'C2', 'C3'], 'D': ['D0', 'D1', 'D2', 'D3']})
+
+# Dataframe left and right share the same column 'key', can merge two on this column:
+print(pd.merge(left, right, how='inner', on='key'))
+print("")
