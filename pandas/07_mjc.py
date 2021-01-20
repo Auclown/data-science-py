@@ -38,3 +38,10 @@ right = pd.DataFrame(
 # Dataframe left and right share the same column 'key', can merge two on this column:
 print(pd.merge(left, right, how='inner', on='key'))
 print("")
+
+print(left.join(right))
+print("")
+
+# You can also set how it will be joined by using 'how' parameter
+print(left.join(right, how='outer'))
+print("")
