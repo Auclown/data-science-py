@@ -18,3 +18,31 @@ print("")
 print(df['col2'].value_counts())
 print("")
 
+
+def times2(x):
+    return x * 2
+
+
+# apply() method allows you to use custom functions on Dataframes
+print(df['col1'].apply(times2))
+print("")
+
+# and also built-in functions.
+print(df['col3'].apply(len))
+print("")
+
+# lambda expression
+print(df['col2'].apply(lambda x: x * 2))
+print("")
+
+# Can remove column by using drop() method
+# print(df.drop('col1', axis=1))
+
+# sort_values() method allows you to sort the DataFrame
+print(df.sort_values(by='col2'))
+print("")
+
+# isnull() method allows you to see which value of the DataFrame is null
+# returns False if the value is not null
+print(df.isnull())
+print("")
