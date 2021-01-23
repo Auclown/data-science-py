@@ -46,3 +46,16 @@ print("")
 # returns False if the value is not null
 print(df.isnull())
 print("")
+
+# pivot_table() method creates a pivot table which is a multi-index table
+data = {'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
+        'B': ['one', 'one', 'two', 'two', 'one', 'one'],
+        'C': ['x', 'y', 'x', 'y', 'x', 'y'],
+        'D': [1, 3, 2, 5, 4, 1]}
+
+df = pd.DataFrame(data)
+# print(df)
+# values parameter: indicates values of a specific column
+# index parameter: makes specific columns into multi-level index
+# columns parameter:
+print(df.pivot_table(values='D', index=['A', 'B'], columns='C'))
